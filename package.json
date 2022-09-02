@@ -1,0 +1,49 @@
+{
+  "name": "stripe-sample",
+  "version": "0.1.0",
+  "dependencies": {
+    "@craco/craco": "^6.4.5",
+    "@stripe/react-stripe-js": "^1.0.0",
+    "@stripe/stripe-js": "^1.0.0",
+    "body-parser": "^1.20.0",
+    "concurrently": "^6.2.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.2",
+    "express": "^4.17.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^4.0.3",
+    "stripe": "^8.202.0"
+  },
+  "homepage": "http://localhost:3000/",
+  "proxy": "http://localhost:4242",
+  "scripts": {
+    "start-client": "craco start",
+    "start-server": "node server.js --ignore client",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "start": "concurrently \"yarn start-client\" \"yarn start-server\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+  }
+}
