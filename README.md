@@ -1,6 +1,6 @@
-# Prebuilt Checkout page with subscriptions
+# A simple payment flow using Stripe
 
-Explore a full, working code sample of an integration with Stripe Checkout and Customer Portal. The client- and server-side code redirects to a prebuilt payment page hosted on Stripe. Included are some basic build and run scripts you can use to start up the application.
+POC for a payment page using Stripe and Elements.
 
 ## Running the sample
 
@@ -10,10 +10,27 @@ Explore a full, working code sample of an integration with Stripe Checkout and C
 npm install
 ~~~
 
-2. Run the application
+2. Set the environment variables
+
+```
+# Stripe keys (are found in Stripe dashboard)
+STRIPE_PUBLISHABLE_KEY=pk_test_5...
+STRIPE_SECRET_KEY=sk_test_51L...
+STRIPE_WEBHOOK_SECRET=whsec_6d40...
+
+# Stripe key for React front end
+REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_test_51L...
+
+# Environment variables
+STATIC_DIR=../../client/vanillajs
+
+REACT_APP_MAIN_URL=http://localhost:3000
+```
+
+3. Run the application
 
 ~~~
 npm start
 ~~~
 
-3. Go to [http://localhost:3000/](http://localhost:3000/)
+4. Go to [http://localhost:3000/](http://localhost:3000/)
